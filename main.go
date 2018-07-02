@@ -88,7 +88,7 @@ func Form2Mail(w http.ResponseWriter, req *http.Request) {
 	// get RCPT TO -> last part of URI
 	p := strings.Split(req.URL.String(), "/")
 	if len(p) != 2 {
-		log.Println("no recpt to found")
+		log.Println("no rcpt to found")
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}

@@ -12,4 +12,5 @@
 *.out
 
 config.yaml
-server
+dist/
+deploy
