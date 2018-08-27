@@ -8,7 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-gomail/gomail"
+	"gopkg.in/gomail.v2"
+
 	"github.com/spf13/viper"
 	"github.com/tomasen/realip"
 )
@@ -135,7 +136,7 @@ func Form2Mail(w http.ResponseWriter, req *http.Request) {
 	m.SetHeader("Subject", subject)
 	m.SetBody("text/plain", body)
 
-	d := gomail.NewDialer(viper.GetString("smtp.host"), viper.GetInt("smtp.port"), viper.GetString("smtp.user"), viper.GetString("smtp.password"))
+	d := gomail.NewPlainDialer(viper.GetString("smtp.host"), viper.GetInt("smtp.port"), viper.GetString("smtp.user"), viper.GetString("smtp.password"))
 
 	if err := d.DialAndSend(m); err != nil {
 		log.Printf("send mail failed: %v", err)
