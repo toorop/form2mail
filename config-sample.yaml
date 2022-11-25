@@ -1,3 +1,18 @@
+# used in email subject
+siteName: ddp.st
+
+# Max emails sent per IP & per hours
+ratePerIpPerHour: 6
+
+# list of valids recipients
 validRecipents:
-  - user1@exemple.com
-  - user2@exemple.com
+  - user2@domain.com
+  - user1@domain.com
+
+# smtp
+smtp:
+  sender: sender-email
+  host: in-v3.mailjet.com
+  port: 587
+  user: user
+  password: password

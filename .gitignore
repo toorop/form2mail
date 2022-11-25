@@ -11,7 +11,7 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-config.yaml
-dist/
-deploy
+dist/config.yaml
+dist/form2mail
+
 .idea/
